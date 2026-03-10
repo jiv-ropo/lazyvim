@@ -44,6 +44,7 @@ return {
     vim.keymap.set({ "n", "t" }, "<C-.>", function()
       require("opencode").toggle()
     end, { desc = "Toggle opencode" })
+    vim.keymap.set("t", "<C-w><C-w>", [[<C-\><C-n><C-w>p]], { desc = "Back to editor from opencode" })
 
     vim.keymap.set({ "n", "x" }, "go", function()
       return require("opencode").operator("@this ")
